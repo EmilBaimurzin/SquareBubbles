@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.square.game.ui.main.FragmentMain"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentTimed"
+            app:destination="@id/fragmentTimed" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentMoves"
+            app:destination="@id/fragmentMoves" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentEndless"
+            app:destination="@id/fragmentEndless" />
+        <action
+            android:id="@+id/action_fragmentMain_to_dialogOptions"
+            app:destination="@id/dialogOptions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTimed"
+        android:name="com.square.game.ui.timed.FragmentTimed"
+        android:label="FragmentTimed" >
+        <action
+            android:id="@+id/action_fragmentTimed_to_dialogEnd"
+            app:destination="@id/dialogEnd" />
+        <action
+            android:id="@+id/action_fragmentTimed_to_dialogOptions"
+            app:destination="@id/dialogOptions" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogEnd"
+        android:name="com.square.game.ui.dialogs.DialogEnd"
+        android:label="DialogEnd" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+        <argument
+            android:name="game"
+            app:argType="com.square.game.domain.other.Game" />
+    </dialog>
+    <fragment
+        android:id="@+id/fragmentMoves"
+        android:name="com.square.game.ui.moves.FragmentMoves"
+        android:label="FragmentMoves" >
+        <action
+            android:id="@+id/action_fragmentMoves_to_dialogEnd"
+            app:destination="@id/dialogEnd" />
+        <action
+            android:id="@+id/action_fragmentMoves_to_dialogOptions"
+            app:destination="@id/dialogOptions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEndless"
+        android:name="com.square.game.ui.endless.FragmentEndless"
+        android:label="FragmentEndless" >
+        <action
+            android:id="@+id/action_fragmentEndless_to_dialogEnd"
+            app:destination="@id/dialogEnd" />
+        <action
+            android:id="@+id/action_fragmentEndless_to_dialogOptions"
+            app:destination="@id/dialogOptions" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogOptions"
+        android:name="com.square.game.ui.dialogs.DialogOptions"
+        android:label="DialogOptions" >
+        <argument
+            android:name="game"
+            app:argType="com.square.game.domain.other.Game" />
+        <argument
+            android:name="isGame"
+            app:argType="boolean" />
+    </dialog>
+</navigation>

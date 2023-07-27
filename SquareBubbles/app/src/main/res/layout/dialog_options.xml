@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="220dp"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_board"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="2dp"
+            android:text="@string/vibration"
+            android:textColor="#FFD700"
+            android:textSize="30sp" />
+
+        <com.square.game.core.library.CustomImageButton
+            android:id="@+id/vibroButton"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/button_on" />
+
+        <TextView
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="2dp"
+            android:text="@string/sound"
+            android:textColor="#FFD700"
+            android:textSize="30sp" />
+
+        <com.square.game.core.library.CustomImageButton
+            android:src="@drawable/button_on"
+            android:id="@+id/soundButton"
+            android:layout_marginTop="8dp"
+            android:layout_width="120dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <com.square.game.core.library.CustomImageButton
+        android:id="@+id/buttonClose"
+        android:layout_width="50dp"
+        android:layout_gravity="end"
+        android:layout_height="50dp"
+        android:src="@drawable/button_close"/>
+
+    <com.square.game.core.library.CustomImageButton
+        android:id="@+id/buttonRestart"
+        android:layout_width="50dp"
+        android:layout_gravity="bottom|center"
+        android:layout_height="50dp"
+        android:src="@drawable/button_restart"/>
+
+</FrameLayout>

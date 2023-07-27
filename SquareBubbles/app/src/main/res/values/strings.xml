@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SquareBubbles</string>
+    <string name="pause">Pause</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="your_time">YOUR TIME</string>
+    <string name="music">MUSIC</string>
+    <string name="vibration">VIBRATION</string>
+    <string name="scores">SCORE:</string>
+    <string name="best">BEST:</string>
+    <string name="finish">Finish</string>
+    <string name="sound">SOUND</string>
+</resources>
